@@ -6,7 +6,7 @@
   其中版本管理器有nvm（win推荐）、n（mac可用）
 2、git、svn等等
   语法：feat: 新增、fix:解决了XXX bug、style: 修改了样式
-  git建议可以用码云来使用，网络稳定
+  git建议可以用码云来使用，网络稳定，管理工具也可以用Sourcetree软件或者vscode 安装好git 插件
 3、学会写md文档
 ```
 ## 项目UI框架选择
