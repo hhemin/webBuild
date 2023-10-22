@@ -2,7 +2,7 @@
 	<view class="content">
 		<!-- <image class="logo" src="/static/logo.png"></image> -->
 		<view>
-
+      {{name}}
 			<text class="title">角色：{{role|roleOptionFilterToName }}</text>
       <button @click="handleRouter('my')">跳转个人中心</button>
       <button @click="getProject()">获取列表</button>
