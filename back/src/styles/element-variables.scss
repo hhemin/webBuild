@@ -1,0 +1,76 @@
+/* Element Variables */
+
+// Override Element UI variables
+$--color-primary: #1890ff;
+$--color-success: #13ce66;
+$--color-warning: #ffba00;
+$--color-danger: #ff4949;
+$--color-info: #5d5d5d;
+$--button-font-weight: 400;
+$--color-text-regular: #1f2d3d;
+$--border-color-light: #dfe4ed;
+$--border-color-lighter: #e6ebf5;
+$--table-border: 1px solid#dfe6ec;
+
+// Icon font path, required
+$--font-path: "~element-ui/lib/theme-chalk/fonts";
+
+// Apply overrided variables in Element UI
+@import "~element-ui/packages/theme-chalk/src/index";
+
+// The :export directive is the magic sauce for webpack
+// https://mattferderer.com/use-sass-variables-in-typescript-and-javascript
+:export {
+  theme: $--color-primary;
+}
+
+
+// * el-drawer 样式
+.el-drawer {
+	.el-drawer__header {
+		padding: 15px 20px 14px;
+		margin-bottom: 0;
+		border-bottom: 1px solid $--border-color-lighter;
+		span {
+			font-size: 17px;
+			color: #303133 !important;
+		}
+	}
+  .el-drawer__body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    .main {
+      flex: 1;
+      overflow: auto;
+      padding: 20px;
+    }
+    .el-drawer__footer {
+      border-top: 1px solid $--border-color-lighter;
+      // padding-top: 10px;
+      box-sizing: border-box;
+      padding: 10px;
+      min-height: 110px;
+      text-align: right;
+    }
+  }
+
+
+	// drawer select 样式
+	.el-select {
+		width: 100%;
+	}
+
+	// drawer-form 中存在两列 form-item
+	.drawer-multiColumn-form {
+		display: flex;
+		flex-wrap: wrap;
+		.el-form-item {
+			width: 47%;
+			&:nth-child(2n-1) {
+				margin-right: 5%;
+			}
+		}
+	}
+}
